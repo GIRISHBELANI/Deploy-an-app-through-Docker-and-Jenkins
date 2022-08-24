@@ -18,5 +18,5 @@ RUN python3 manage.py migrate
 RUN python3 manage.py createsuperuser
 
 COPY . .
-EXPOSE 8001
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8001"]
+EXPOSE 80
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:80"]
