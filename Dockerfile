@@ -9,6 +9,8 @@ RUN pip install --user pipenv
 COPY . .
 
 RUN pip install -r requirements.txt
+
+RUN cd lets_quiz
 RUN python3 manage.py migrate
 RUN python3 manage.py createsuperuser
 
