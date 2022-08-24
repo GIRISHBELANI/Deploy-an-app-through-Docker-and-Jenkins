@@ -9,9 +9,9 @@ RUN pip install --user pipenv
 COPY . .
 
 RUN pip install -r requirements.txt
-RUN python manage.py migrate
-RUN python manage.py createsuperuser
+RUN python3 manage.py migrate
+RUN python3 manage.py createsuperuser
 
 COPY . .
-EXPOSE 8080
-CMD ["python", "manage.py", "runserver"]
+
+CMD ["python3", "manage.py", "runserver"]
