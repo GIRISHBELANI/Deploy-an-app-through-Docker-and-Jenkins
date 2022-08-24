@@ -11,6 +11,8 @@ COPY . .
 RUN pip install -r requirements.txt
 
 RUN cd lets_quiz
+
+WORKDIR lets_quiz
 RUN python3 manage.py migrate
 RUN python3 manage.py createsuperuser
 
