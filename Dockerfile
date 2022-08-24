@@ -1,7 +1,7 @@
 FROM ubuntu:latest
+FROM python:3.9
 
 RUN apt-get update
-RUN apt-get install python==3.9 -y
 RUN apt-get install pip -y
 RUN pip install django==1.11
 RUN pip install --user pipenv
